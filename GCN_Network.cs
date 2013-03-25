@@ -115,7 +115,7 @@ namespace Bentley.GenerativeComponents.Nodes.Specific
         static private NodeTechniqueResult UDPSend(Node node, IGCEnvironment gcEnvironment, NameCatalog nameCatalog, NodeScopeUpdateReason updateReason)
         {
             Network netNode = (Network)node;
-            if (netNode.Port != null && netNode.IPAddr != null && netNode.UDPMessage != null)
+            if (netNode.Port != null && netNode.IPAddr != null && netNode.UDPMessage != null && netNode.DoSendValues)
             {
                 if (!netNode.IPAddr.Equals(netNode.m_ipAddr) || !netNode.Port.Equals(netNode.m_port) || netNode.ipep == null) 
                     netNode.ipep = new IPEndPoint(IPAddress.Parse(netNode.IPAddr), netNode.Port);

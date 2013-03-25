@@ -61,14 +61,14 @@ namespace CERVER.Hardware.Network
             {
                 case controlType.Receive:
                     OptionsExpander.Visibility = System.Windows.Visibility.Visible;
-                    btSend.Visibility = System.Windows.Visibility.Visible;
-                    btReceive.Visibility = System.Windows.Visibility.Hidden;
+                    btSend.Visibility = System.Windows.Visibility.Hidden;
+                    btReceive.Visibility = System.Windows.Visibility.Visible;
                     this.Height = 30;
                     break;
                 case controlType.Send:
                     OptionsExpander.Visibility = System.Windows.Visibility.Hidden;
-                    btSend.Visibility = System.Windows.Visibility.Hidden;
-                    btReceive.Visibility = System.Windows.Visibility.Visible;
+                    btSend.Visibility = System.Windows.Visibility.Visible;
+                    btReceive.Visibility = System.Windows.Visibility.Hidden;
                     this.Height = 30;
                     break;
                 case controlType.Other:
